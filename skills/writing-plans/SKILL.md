@@ -66,9 +66,9 @@ This structure informs the task decomposition. Each task should produce self-con
 ### Task N: [Component Name]
 
 **Files:**
-- Create: `exact/path/to/file.py`
-- Modify: `exact/path/to/existing.py:123-145`
-- Test: `tests/exact/path/to/test.py`
+- Create: `~/project-root/exact/path/to/file.py`
+- Modify: `~/project-root/exact/path/to/existing.py:123-145`
+- Test: `~/project-root/tests/exact/path/to/test.py`
 
 - [ ] **Step 1: Write the failing test**
 
@@ -114,7 +114,7 @@ Every step must contain the actual content an engineer needs. These are **plan f
 - References to types, functions, or methods not defined in any task
 
 ## Remember
-- Exact file paths always
+- **Absolute file paths always** — use `~/<project-root-relative>/path/to/file.py` not relative paths, so paths are clickable in terminal output
 - Complete code in every step — if a step changes code, show the code
 - Exact commands with expected output
 - DRY, YAGNI, TDD, frequent commits
