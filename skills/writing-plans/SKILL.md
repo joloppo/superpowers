@@ -17,7 +17,7 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 
 **Save plans to:** `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
 - (User preferences for plan location override this default)
-- When displaying the path to the user, always use the full absolute path so it is clickable in terminal output
+- When displaying the path to the user, always use the full absolute path surrounded by spaces so it is clickable in terminal output (punctuation like periods directly after a path breaks terminal click detection)
 
 ## Scope Check
 
@@ -115,7 +115,7 @@ Every step must contain the actual content an engineer needs. These are **plan f
 - References to types, functions, or methods not defined in any task
 
 ## Remember
-- **Absolute file paths always** — use `~/<project-root-relative>/path/to/file.py` not relative paths, so paths are clickable in terminal output
+- **Absolute file paths always** — use `~/<project-root-relative>/path/to/file.py` not relative paths, and surround paths with spaces so they are clickable in terminal output (punctuation like `.` directly after a path breaks click detection)
 - Complete code in every step — if a step changes code, show the code
 - Exact commands with expected output
 - DRY, YAGNI, TDD, frequent commits
@@ -136,9 +136,9 @@ If you find issues, fix them inline. No need to re-review — just fix and move 
 
 After saving the plan, offer execution choice:
 
-**"Plan complete and saved to `<absolute-path>`. Two execution options:**
+**"Plan complete and saved to `<absolute-path>` . Two execution options:**
 
-(IMPORTANT: `<absolute-path>` must be the full absolute filesystem path, e.g. `/Users/me/project/docs/superpowers/plans/2026-04-15-foo.md`, so it is clickable in the terminal.)
+(IMPORTANT: `<absolute-path>` must be the full absolute filesystem path, e.g. `/Users/me/project/docs/superpowers/plans/2026-04-15-foo.md` , and must be surrounded by spaces — punctuation like `.` directly after a path breaks terminal click detection.)
 
 **1. Subagent-Driven (recommended)** - I dispatch a fresh subagent per task, review between tasks, fast iteration
 
